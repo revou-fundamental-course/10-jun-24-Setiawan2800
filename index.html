@@ -3,10 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Konversi Suhu</title>
+    
 </head>
 <body>
-    <h1>Hello World</h1>
-    <h2>Halo Dunia</h2>
+    <header>
+        <div class="header-content">
+            <h1>Temperature Converter</h1>
+            <p> Enter the temperature in degrees Celsius (&deg;C) into the box below, 
+                then click the Convert button to get the conversion result in Fahrenheit (&deg;F). </p>
+        </div>
+        </header>
+    <main>
+        <section class="converter">
+            <h2>Convert Celsius to Fahrenheit</h2>
+            <form id="converterForm">
+                <label for="celsius">Celsius (&deg;C):</label>
+                <input type="number" id="celsius" name="celsius">
+                <div class="buttons">
+                    <button type="button" class="convert" onclick="convertToFahrenheit()">Convert</button>
+                    <button type="reset" class="reset" onclick="resetFields()">Reset</button>
+                    <button type="button" class="reverse" onclick="reverseConversion()">Reverse</button>
+                </div>
+                <label for="fahrenheit">Fahrenheit (&deg;F):</label>
+                <input type="number" id="fahrenheit" name="fahrenheit" readonly>
+            </form>
+            
+        </section>
+        <section class="calculation">
+            <h2>Calculation Steps</h2>
+            <form id="calculationForm">
+                <label for="calculationSteps">Steps:</label>
+                <textarea id="calculationSteps" name="calculationSteps" rows="3" readonly></textarea>
+            </form>
+        </section>
+        <hr>
+        <section class="explanation">
+            <h2>How to Convert Celsius (&deg;C) to Fahrenheit (&deg;F)</h2>
+            <p>To convert a temperature in Celsius to Fahrenheit, multiply the Celsius temperature by 9/5 and then add 32.</p>
+            <p>Formula: <code><span>S</span><sub>F</sub> = (<span>S</span><sub>C</sub> × 9/5) + 32</code></p>
+            <p>Or: <code><span>S</span><sub>F</sub> = (<span>S</span><sub>C</sub> × 1.8) + 32</code></p>
+            <p>To convert Fahrenheit to Celsius, subtract 32 from the Fahrenheit temperature and then multiply by 5/9.</p>
+            <p>Formula: <code><span>S</span><sub>C</sub> = (<span>S</span><sub>F</sub> - 32) × 5/9</code></p>
+            <p>Or: <code><span>S</span><sub>C</sub> = (<span>S</span><sub>F</sub> - 32) / 1.8</code></p>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; Copyright 2024</p>
+            <p>Designed with ❤️ by <a href="#https://www.instagram.com/kasetiawan_?igsh=NjB6NHpteWZpYmo3">EKA SETIAWAN</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
